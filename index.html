@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZedAI.com - Unlock the Power of AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sign-on.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="luna-ai-animations.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="global.css">
+    <script src="header-scroll.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-bg': '#0A0A0A',
+                        'primary': '#3B82F6',
+                        'primary-light': '#60A5FA',
+                        'custom-text': '#E6E6E6',
+                        'custom-dark': 'rgb(24 24 24)',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        #prompt-display {
+            position: relative;
+            overflow: hidden;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+        }
+        .prompt-text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            font-size: 2rem;
+            white-space: nowrap;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2;
+            width: 100%;
+        }
+        @keyframes cyclePrompts {
+            0%, 100% { opacity: 0; }
+            10%, 90% { opacity: 1; }
+        }
+        #prompt-display .prompt-text {
+            animation: cyclePrompts 12s infinite;
+        }
+        #prompt-display .prompt-text:nth-child(1) { animation-delay: 0s; }
+        #prompt-display .prompt-text:nth-child(2) { animation-delay: 3s; }
+        #prompt-display .prompt-text:nth-child(3) { animation-delay: 6s; }
+        #prompt-display .prompt-text:nth-child(4) { animation-delay: 9s; }
+        /* Add this new style to remove underlines */
+        .no-underline, .no-underline:hover, .no-underline:focus {
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+<style>
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: opacity 0.3s ease-in-out;
+        background-color: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(10px);
+        opacity: 0.5;
+    }
+    header:hover {
+        opacity: 1;
+    }
+</style>
+<body class="bg-custom-bg text-custom-text font-body">
+    <div class="flex min-h-[100dvh] flex-col">
+      <header class="fixed top-0 left-0 right-0 z-50 bg-custom-bg bg-opacity-80 backdrop-blur-md transition-all duration-300">
+        <div class="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-6">
+          <a href="index.html" class="flex items-center no-underline">
+            <img src="luna_logo.svg" alt="Luna Logo" class="logo-white h-8">
+        </a>
+            <nav class="flex space-x-4">
+                <a href="luna.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors no-underline hover:no-underline">Luna</a>
+                <a href="pricing.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors no-underline hover:no-underline">Pricing</a>
+                <a href="contact.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors no-underline hover:no-underline">Contact</a>
+            </nav>
+        </div>
+    </header>
+        <main class="flex-1">
+            <section class="container mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-24 md:px-6 md:py-32 mt-20 md:mt-80">
+                <div class="space-y-8 text-center mx-auto max-w-4xl w-full flex flex-col items-center">
+                    <h1 class="text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl text-center leading-tight">
+                        Unlock the Power of AI with Luna
+                    </h1>
+                    <p class="max-w-[600px] text-muted-foreground md:text-xl mx-auto text-center w-full">
+                        Harness the latest advancements in artificial intelligence to revolutionize your business.
+                    </p>
+                    <div id="prompt-display" class="text-[1.2rem] md:text-[2rem] font-bold my-12 h-24 flex items-center justify-center overflow-hidden">
+                        <div class="prompt-text absolute whitespace-nowrap">Summarize the news headlines I missed today</div>
+                        <div class="prompt-text absolute whitespace-nowrap">Create a personalized workout plan for the week</div>
+                        <div class="prompt-text absolute whitespace-nowrap">Generate a script to monitor my website's uptime</div>
+                        <div class="prompt-text absolute whitespace-nowrap">Create a task to periodically clean up my codebase</div>
+                    </div>
+                    <div class="flex w-full max-w-md justify-center mx-auto space-x-6 items-center">
+                        <a href="luna.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+                            Learn More ↗
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="container mx-auto max-w-7xl px-4 py-24 md:px-6 md:py-32">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <div class="space-y-4">
+                        <svg class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                        </svg>
+                        <h3 class="text-2xl font-bold">Accelerate Innovation</h3>
+                        <p class="text-muted-foreground">
+                            Leverage Luna's cutting-edge AI capabilities to rapidly prototype and deploy new features.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <svg class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <circle cx="12" cy="12" r="4" />
+                        </svg>
+                        <h3 class="text-2xl font-bold">Boost Productivity</h3>
+                        <p class="text-muted-foreground">
+                            Automate repetitive tasks and free up your team to focus on high-impact work.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <svg class="h-12 w-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                        </svg>
+                        <h3 class="text-2xl font-bold">Enhance Insights</h3>
+                        <p class="text-muted-foreground">
+                            Uncover hidden patterns and make data-driven decisions with Luna's advanced analytics.
+                        </p>
+                    </div>
+                </div>
+           
+           
+            <section class="w-full py-12 md:py-24 lg:py-32 mt-40">
+              <div class="container grid gap-12 px-4 md:px-6">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                  <div class="space-y-2">
+                    <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl">Luna Coming Soon</h1>
+                    <p class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                      Unlock the Full Potential of AI-Powered Automation
+                    </p>
+                  </div>
+                </div>
+              <div class="mx-auto grid grid-cols-1 gap-6 md:grid-cols-2">
+                 <div class="flex flex-col justify-between rounded-lg border border-[rgb(74,74,74)] bg-custom-bg p-8 shadow-sm">
+                   <div class="space-y-4">
+                     <h3 class="text-2xl font-bold text-white-200">Free</h3>
+                     <p class="text-white-300">Try Luna for free today.</p>
+                     <ul class="space-y-2 text-white-300">
+                        <li class="flex items-center">
+                          <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Basic writing and problem-solving
+                        </li>
+                        <li class="flex items-center">
+                          <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Limited Task Automation
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div class="text-4xl font-bold">$0</div>
+                      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-[rgb(74,74,74)] bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Coming Soon</button>
+                  </div>                  
+                  </div>
+                  <div class="flex flex-col justify-between rounded-lg border border-[rgb(74,74,74)] bg-custom-bg p-8 shadow-sm">
+                    <div class="space-y-4">
+                      <h3 class="text-2xl font-bold text-white-200">Plus</h3>
+                      <p class="text-white-300">Unlock the full potential of LunaGPT.</p>
+                      <ul class="space-y-2 text-white-300">
+                        <li class="flex items-center">
+                          <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Parallel Task Automation
+                        </li>
+                        <li class="flex items-center">
+                          <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Full access to LunaGPT
+                        </li>
+                        <li class="flex items-center">
+                          <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Increased message limits
+                        </li>
+                        <li class="flex items-center">
+                          <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Advanced data analysis
+                        </li>
+                        <li class="flex items-center">
+                          <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Early access to new features
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between gap-4">
+                      <div class="text-4xl font-bold">$20/mo</div>
+                      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-[rgb(74,74,74)] bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Coming Soon</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+        </main>
+        <footer class="bg-custom-bg w-full flex flex-col">
+          <div class="container mx-auto px-4 py-8 md:px-6">
+            <div class="mt-8 text-center">
+                <p class="text-sm text-gray-500">ZedAI © 2024</p>
+            </div>
+        </div>
+        </footer>
+    </div>
+    <script src="sign-on.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZedAI.com - LunaGPT: Features</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sign-on.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="luna-ai-animations.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="global.css">
+    <script src="header-scroll.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-bg': '#0A0A0A',
+                        'primary': '#3B82F6',
+                        'primary-light': '#60A5FA',
+                        'custom-text': '#E6E6E6',
+                        'custom-grid': 'rgb(24 24 24 / var(--tw-bg-opacity))',
+                        'custom-dark': 'rgb(24 24 24)',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: opacity 0.3s ease-in-out;
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            opacity: 0.5;
+        }
+        header:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-custom-bg text-custom-text font-body">
+    <div class="flex min-h-[100dvh] flex-col">
+        <header class="fixed top-0 left-0 right-0 z-50 bg-custom-bg bg-opacity-80 backdrop-blur-md transition-all duration-300">
+            <div class="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-6">
+                <a href="index.html" class="flex items-center no-underline">
+                    <img src="luna_logo.svg" alt="Luna Logo" class="logo-white h-8">
+                </a>
+                <nav class="flex space-x-4">
+                    <a href="luna.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors no-underline hover:no-underline">Luna</a>
+                    <a href="pricing.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors no-underline hover:no-underline">Pricing</a>
+                    <a href="contact.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors no-underline hover:no-underline">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <main class="flex-1">
+            <section class="container mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-24 md:px-6 md:py-32 mt-10 md:mt-15">
+                <h1 class="text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl text-center leading-tight mb-8">
+                    Luna GPT
+                </h1>
+                <p class="max-w-[800px] text-muted-foreground md:text-xl mx-auto text-center w-full mb-12">
+                    Discover the powerful features that make Luna the ultimate AI-powered assistant.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mt-10 md:mt-15">
+                    <div class="bg-[rgb(24_24_24_/_var(--tw-bg-opacity))] p-6 rounded-lg">
+                        <h2 class="text-2xl font-bold mb-4">Intelligent Process Optimization</h2>
+                        <p>Luna effortlessly enhances your workflows by intelligently automating routine tasks. From streamlining daily operations to optimizing complex processes, Luna empowers you to achieve peak efficiency with minimal effort.</p>
+                    </div>
+                    <div class="bg-custom-grid p-6 rounded-lg">
+                        <h2 class="text-2xl font-bold mb-4">Advanced Natural Language Understanding</h2>
+                        <p>Experience seamless communication with Luna's sophisticated language capabilities. Whether it's interpreting commands, answering queries, or generating insightful responses, Luna's advanced NLP ensures a natural and intuitive interaction every time.</p>
+                    </div>
+                    <div class="bg-custom-grid p-6 rounded-lg">
+                        <h2 class="text-2xl font-bold mb-4">Predictive Analytics for Informed Decisions</h2>
+                        <p>Leverage Luna's predictive analytics to stay ahead of the curve. By analyzing data trends and forecasting future outcomes, Luna helps you make well-informed decisions and strategically navigate your business landscape.</p>
+                    </div>
+                    <div class="bg-custom-grid p-6 rounded-lg">
+                        <h2 class="text-2xl font-bold mb-4">Customizable Automation Solutions</h2>
+                        <p>Tailor Luna's automation to fit your unique needs. With flexible customization options, you can create bespoke workflows and solutions that align perfectly with your specific requirements, driving personalized efficiency and effectiveness.</p>
+                    </div>
+                    <div class="bg-custom-grid p-6 rounded-lg">
+                        <h2 class="text-2xl font-bold mb-4">Seamless Integration</h2>
+                        <p>Integrate Luna effortlessly into your existing systems. Luna’s compatibility with a wide range of tools and platforms ensures a smooth transition and enhances your current setup, maximizing your productivity without disruption.</p>
+                    </div>
+                    <div class="bg-custom-grid p-6 rounded-lg">
+                        <h2 class="text-2xl font-bold mb-4">Real-Time Collaboration and Support</h2>
+                        <p>Collaborate and get real-time support with Luna’s integrated features. Whether working with teams or seeking assistance, Luna provides instant feedback and collaborative tools to ensure you and your team stay aligned and productive.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="container mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-24 md:px-6 md:py-32">
+                <h1 class="text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl text-center leading-tight mb-8">
+                    Revolutionizing Task Automation
+                </h1>
+                <p class="max-w-[800px] text-muted-foreground md:text-xl mx-auto text-center w-full mb-12">
+                    Luna is your gateway to a new era of task management. As a state-of-the-art AI platform, Luna is designed to streamline and elevate your workflows, making task automation smarter and more intuitive than ever before.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-8 w-full max-w-4xl mb-10">
+                    <div class="bg-custom-gray p-6 rounded-lg mt-20">
+                        <h2 class="text-2xl font-bold mb-4">Seamless Intelligence</h2>
+                        <h4 class="text-1xl font-bold mb-2">Discover the Future of Artifical Intelligence</h4>
+                        <p>Luna is designed to blend effortlessly into your workflow, transforming the mundane into the extraordinary. Our advanced AI understands your needs intuitively, offering solutions that adapt and evolve. With Luna, experience a new level of precision and efficiency that makes technology feel natural.</p><br>
+                        <ul class="space-y-2 text-white-300">
+                            <li class="flex items-center">
+                              <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                              </svg>
+                              Context-Aware Solutions: Luna anticipates your requirements, offering intelligent recommendations.
+                            </li>
+                            <li class="flex items-center">
+                              <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                              </svg>
+                              Effortless Integration: Connect seamlessly with your existing tools and platforms.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Smart Adaptation: Continually learns and adapts to enhance productivity.
+                              </li>
+                          </ul>
+                    </div>
+                    <div class="bg-custom-gray p-6 rounded-lg mt-10">
+                        <h2 class="text-2xl font-bold mb-4">Elegant Design</h2>
+                        <h4 class="text-1xl font-bold mb-2">Beauty in Every Interaction</h4>
+                        <p>Crafted with a minimalist approach, Luna embodies sophistication and simplicity. Our sleek interface is designed to be as intuitive as it is beautiful, ensuring that your experience is both enjoyable and efficient.</p><br>
+                        <ul class="space-y-2 text-white-300">
+                            <li class="flex items-center">
+                              <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                              </svg>
+                              Streamlined Interface: A clean, modern design that reduces complexity.
+                            </li>
+                            <li class="flex items-center">
+                              <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                              </svg>
+                              Intuitive Navigation: Easily find what you need with a user-friendly layout.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Aesthetically Pleasing: A visual design that complements any workspace.
+                              </li>
+                          </ul>
+                    </div>
+                    <div class="bg-custom-gray p-6 rounded-lg mt-10">
+                        <h2 class="text-2xl font-bold mb-4">Unmatched Performance</h2>
+                        <h4 class="text-1xl font-bold mb-2">Power Meets Precision</h4>
+                        <p>Luna delivers powerful automation with unmatched speed and accuracy. Built to handle the most demanding tasks, it ensures that you can achieve your goals with confidence and ease.</p><br>
+                        <ul class="space-y-2 text-white-300">
+                            <li class="flex items-center">
+                              <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                              </svg>
+                              High-Speed Processing: Complete tasks faster than ever before.
+                            </li>
+                            <li class="flex items-center">
+                              <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                              </svg>
+                              Robust Reliability: Dependable performance even under heavy workloads.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Optimized Efficiency: Maximize output while minimizing effort.
+                              </li>
+                          </ul>
+                    </div>
+                    <div class="bg-custom-gray p-6 rounded-lg mt-10">
+                        <h2 class="text-2xl font-bold mb-4">Intelligent Insights</h2>
+                        <h4 class="text-1xl font-bold mb-2">Transform Data into Actionable Insights</h4>
+                        <p>Luna doesn’t just automate tasks—it provides actionable insights that drive smarter decisions. Harness the power of advanced analytics to unlock new opportunities and refine your strategies.</p><br>
+                        <ul class="space-y-2 text-white-300">
+                            <li class="flex items-center">
+                              <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                              </svg>
+                              Advanced Analytics: Gain deeper understanding with sophisticated data analysis.
+                            </li>
+                            <li class="flex items-center">
+                              <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5" />
+                              </svg>
+                              Predictive Insights: Forecast trends and make proactive decisions.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="mr-2 h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Custom Reports: Tailor insights to meet your specific needs.
+                              </li>
+                          </ul>
+                    </div>
+                    <div class="space-y-8 text-center mx-auto max-w-4xl w-full flex flex-col items-center mt-40">
+                        <h1 class="text-2xl font-bold tracking-tighter md:text-2xl lg:text-4xl text-center leading-tight">
+                            Join the Kickstarter Today
+                        </h1>
+                        <p class="max-w-[1000px] text-muted-foreground md:text-2m mx-auto text-center w-full">
+                            Experience the future of task automation today with Luna. Designed to seamlessly integrate into your life, Luna offers a blend of elegance, performance, and intelligence that sets a new standard in automation. Be a part of this groundbreaking journey and join us on Kickstarter. Support our vision, get exclusive early access, and help shape the future of automation with Luna.
+                        </p>
+                        <div class="flex w-full max-w-md justify-center mx-auto space-x-6 items-center">
+                            <a href="https://www.kickstarter.com/profile/lunagpt" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+                                Learn More ↗
+                            </a>
+                        </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-[rgb(10_10_10_/_var(--tw-bg-opacity))]">
+            <div class="container mx-auto px-4 py-8 md:px-6">
+                <div class="mt-8 text-center">
+                    <p class="text-sm text-gray-500">ZedAI © 2024</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
