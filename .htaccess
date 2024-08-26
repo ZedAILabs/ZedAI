@@ -1,0 +1,4 @@
+Redirect 301 /index.html /home
+Redirect 301 /luna.html /luna
+Redirect 301 /pricing.html /pricing
+Redirect 301 /contact.html /contact
