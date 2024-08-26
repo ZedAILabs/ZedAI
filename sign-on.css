@@ -21,22 +21,43 @@ svg {
   stroke-width: 2px;
 }
 
-a:hover {
-  color: var(--muted-foreground);
-  text-decoration: underline;
+/* Ensure no underline for the link */
+a {
+  text-decoration: none;
 }
+
+/* Arrow icon default color */
+.arrow-icon {
+  stroke: white;
+}
+
+/* Arrow icon color on hover */
+.group:hover .arrow-icon {
+  stroke: black;
+}
+
+/* Remove underline from button text on hover */
+.group:hover span {
+  text-decoration: none;
+}
+
+
+/* Default arrow color */
+.arrow-icon {
+  stroke: white;
+}
+
+/* Arrow color on hover */
+.group:hover .arrow-icon {
+  stroke: black;
+}
+
 
 button:hover {
   background-color: var(--foreground);
   color: var(--background);
 }
 
-.custom-no-underline {
-  text-decoration: none;
-}
-.custom-no-underline:hover {
-  text-decoration: none;
-}
 
 /* Ensure all text is white */
 body {

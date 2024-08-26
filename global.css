@@ -35,6 +35,17 @@
     --radius: 0.5rem;
   }
  
+  /* Default arrow color */
+.arrow-icon {
+  stroke: white;
+}
+
+/* Arrow color on hover */
+.group:hover .arrow-icon {
+  stroke: black;
+}
+
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
